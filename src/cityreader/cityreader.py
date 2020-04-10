@@ -78,7 +78,7 @@ lon_one = cord1[1]
 lat_long_2 = input('Enter Lat2,Lon2: ')
 cord2 = lat_long_2.split(',')
 lat_two = cord2[0]
-lon_twos = cord2[1]
+lon_two = cord2[1]
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # within will hold the cities that fall within the specified region
   if lat1 > lat2:
@@ -91,3 +91,7 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # the specified coordinates.
 
   return within
+
+search = cityreader_stretch(lat_one,lon_one,lat_two,lon_two,cities)
+for c in search:
+  print(c.name,c.lat,c.lon)
